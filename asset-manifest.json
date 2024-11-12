@@ -1,15 +1,18 @@
 {
   "files": {
-    "main.css": "/Thomas-Neves/static/css/main.7955ea3c.css",
-    "main.js": "/Thomas-Neves/static/js/main.39005a5d.js",
+    "main.css": "/Thomas-Neves/static/css/main.4bdc4d06.css",
+    "main.js": "/Thomas-Neves/static/js/main.27ef962d.js",
     "static/js/453.cc72db25.chunk.js": "/Thomas-Neves/static/js/453.cc72db25.chunk.js",
+    "static/media/glowing_circuit_lines-efects.gif": "/Thomas-Neves/static/media/glowing_circuit_lines-efects.796bba51368b79d0ae82.gif",
+    "static/media/circuit-lines.png": "/Thomas-Neves/static/media/circuit-lines.99866fc6334ed0f8fb1e.png",
+    "static/media/thomas.png": "/Thomas-Neves/static/media/thomas.4da32ad9d0568be29d7e.png",
     "index.html": "/Thomas-Neves/index.html",
-    "main.7955ea3c.css.map": "/Thomas-Neves/static/css/main.7955ea3c.css.map",
-    "main.39005a5d.js.map": "/Thomas-Neves/static/js/main.39005a5d.js.map",
+    "main.4bdc4d06.css.map": "/Thomas-Neves/static/css/main.4bdc4d06.css.map",
+    "main.27ef962d.js.map": "/Thomas-Neves/static/js/main.27ef962d.js.map",
     "453.cc72db25.chunk.js.map": "/Thomas-Neves/static/js/453.cc72db25.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7955ea3c.css",
-    "static/js/main.39005a5d.js"
+    "static/css/main.4bdc4d06.css",
+    "static/js/main.27ef962d.js"
   ]
 }
