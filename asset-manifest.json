@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Thomas-Neves/static/css/main.7955ea3c.css",
+    "main.js": "/Thomas-Neves/static/js/main.39005a5d.js",
+    "static/js/453.cc72db25.chunk.js": "/Thomas-Neves/static/js/453.cc72db25.chunk.js",
+    "index.html": "/Thomas-Neves/index.html",
+    "main.7955ea3c.css.map": "/Thomas-Neves/static/css/main.7955ea3c.css.map",
+    "main.39005a5d.js.map": "/Thomas-Neves/static/js/main.39005a5d.js.map",
+    "453.cc72db25.chunk.js.map": "/Thomas-Neves/static/js/453.cc72db25.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7955ea3c.css",
+    "static/js/main.39005a5d.js"
+  ]
+}
