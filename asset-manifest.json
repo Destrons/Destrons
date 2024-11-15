@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.0b4e5dd4.css",
-    "main.js": "/static/js/main.84a6fd9a.js",
-    "static/js/453.cc72db25.chunk.js": "/static/js/453.cc72db25.chunk.js",
-    "static/media/glowing_circuit_lines-efects.gif": "/static/media/glowing_circuit_lines-efects.796bba51368b79d0ae82.gif",
-    "static/media/circuit-lines.png": "/static/media/circuit-lines.99866fc6334ed0f8fb1e.png",
-    "static/media/thomas.png": "/static/media/thomas.4da32ad9d0568be29d7e.png",
-    "index.html": "/index.html",
-    "main.0b4e5dd4.css.map": "/static/css/main.0b4e5dd4.css.map",
-    "main.84a6fd9a.js.map": "/static/js/main.84a6fd9a.js.map",
-    "453.cc72db25.chunk.js.map": "/static/js/453.cc72db25.chunk.js.map"
+    "main.css": "/Destrons/static/css/main.f014b2d3.css",
+    "main.js": "/Destrons/static/js/main.04a5fae4.js",
+    "static/js/453.cc72db25.chunk.js": "/Destrons/static/js/453.cc72db25.chunk.js",
+    "static/media/glowing_circuit_lines-efects.gif": "/Destrons/static/media/glowing_circuit_lines-efects.796bba51368b79d0ae82.gif",
+    "static/media/circuit-lines.png": "/Destrons/static/media/circuit-lines.99866fc6334ed0f8fb1e.png",
+    "static/media/thomas.png": "/Destrons/static/media/thomas.4da32ad9d0568be29d7e.png",
+    "index.html": "/Destrons/index.html",
+    "main.f014b2d3.css.map": "/Destrons/static/css/main.f014b2d3.css.map",
+    "main.04a5fae4.js.map": "/Destrons/static/js/main.04a5fae4.js.map",
+    "453.cc72db25.chunk.js.map": "/Destrons/static/js/453.cc72db25.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0b4e5dd4.css",
-    "static/js/main.84a6fd9a.js"
+    "static/css/main.f014b2d3.css",
+    "static/js/main.04a5fae4.js"
   ]
 }
