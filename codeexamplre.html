@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1c1c1c;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .welcome-section {
+            max-width: 60%;
+        }
+
+        .welcome-section h1 {
+            font-size: 4em;
+            margin: 0;
+            color: #e5e5e5;
+        }
+
+        .welcome-section p {
+            font-size: 1.2em;
+            line-height: 1.5;
+            margin-top: 20px;
+        }
+
+        .projects-section {
+            text-align: right;
+        }
+
+        .projects-section h2 {
+            font-size: 2em;
+            margin: 0 0 20px;
+            color: #e5e5e5;
+        }
+
+        .projects-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .projects-section ul li {
+            margin: 10px 0;
+        }
+
+        .projects-section ul li a {
+            color: #f5f5f5;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        .projects-section ul li a:hover {
+            color: #ffc107;
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 2em;
+            color: #e5e5e5;
+            font-weight: bold;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            font-size: 0.8em;
+            color: #999999;
+        }
+
+        .gradient-border {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 4px solid;
+            border-image: linear-gradient(45deg, #ffc107, #6a5acd) 1;
+            pointer-events: none;
+        }
+
+        .icons {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .icons a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.5em;
+            transition: color 0.3s;
+        }
+
+        .icons a:hover {
+            color: #ffc107;
+        }
+    </style>
+</head>
+<body>
+    <div class="gradient-border"></div>
+    <div class="container">
+        <div class="welcome-section">
+            <h1>Welcome.</h1>
+            <p>
+                My name is Ian Dunkerley, I'm a front-end developer based in Torquay, Devon, UK. I have developed many types of front-ends from well-known DJ applications to Ecommerce booking platforms.<br><br>
+                I'm passionate about cutting-edge, pixel-perfect, beautiful interfaces and intuitively implemented UX.
+            </p>
+        </div>
+        <div class="projects-section">
+            <h2>Projects</h2>
+            <ul>
+                <li><a href="#">Domposer</a></li>
+                <li><a href="#">Cookiemunch</a></li>
+                <li><a href="#">Screen time converter</a></li>
+                <li><a href="#">LED multi</a></li>
+                <li><a href="#">inline.svg</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="logo">ID</div>
+    <div class="icons">
+        <a href="#">M</a>
+        <a href="#">G</a>
+        <a href="#">P</a>
+    </div>
+    <div class="footer">&copy;2022 dunks1980.com</div>
+</body>
+</html>

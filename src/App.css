@@ -1,66 +1,46 @@
 /* App.css */
+html, body{
+    height: 100%;
+}
 body {
     font-family: "Doto", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
     font-variation-settings: "ROND" 0;
-    background-image: url('./assets/glowing_circuit_lines-efects.gif');
     background-size: cover;
     background-repeat: no-repeat; 
     background-position: center; 
+    background-color: #280055;
+    display: flex;
+    flex-direction: column;
 }
 h2, h3{
     font-weight: 900;
 }
 
 header, footer {
-    background-image: url('./assets/circuit-lines.png');
     background-size: cover;
     justify-content: space-between;
     padding: 20px;
-    background-position: center;
-    background-repeat: no-repeat;
     display: flex;
     text-align: center;
-    padding: 20px;
-    background-color: #333 0.1;
     color: white;
 }
-
 header{
-    box-shadow: 0 5px 10px rgba(75, 0, 130, 0.8);
-    border-bottom: 2px solid #7B68EE;
-}
-.header-left{
-    margin-left: 15%;
-    width: 75%;
-    background-color: black;
-    border: 2px solid #7B68EE;
-    padding: 5px;
-    border-Radius: 10%;
-    box-Shadow: 0 0 10px #4B0082, 0 0 20px #4B0082, 0 0 30px #4B0082, 0 0 40px #4B0082, 0 0 50px #4B0082;
-}
-.header-right{
-    margin-right: 15%;
-    width: 25%;
-
-}
-.header-left, .header-right {
-    align-items: center;
-}
-.title-txt{
-    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
 }
 .picperf{
-    width: 150px;
-    height: 150px;
+    width: 50px;
+    height: 50px;
     border: 2px solid #7B68EE;
-    padding: 5px;
     border-Radius: 35%;
     box-Shadow: 0 0 10px #4B0082, 0 0 20px #4B0082, 0 0 30px #4B0082, 0 0 40px #4B0082, 0 0 50px #4B0082;
 }
-
 .navbtt{
     color: white;
     background-color: #4B0082;
@@ -71,8 +51,9 @@ header{
     box-Shadow: 0 0 5px #4B0082, 0 0 10px #4B0082, 0 0 15px #4B0082, 0 0 20px #4B0082, 0 0 25px #4B0082;
 }
 
-.about, .skills, .contact{
- text-align: center;
+.about, .skills, .contact, .projects{
+    text-align: center;
+    display: none;
 }
 
 .art-txt1, .art-txt2, .art-txt3, .art-skl1, .art-skl2{
