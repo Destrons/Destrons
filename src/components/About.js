@@ -1,30 +1,62 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import thomasimage from '../assets/thomas.png';
 
 function About() {
-    return (
-        <section className="about" id='about-me'>
-            <h2>About Me</h2>
-            <div style={{display:'flex'}}>
-                <div className='art-txt1'>
-                    <h3>desenvolvedor</h3>
-                    <p>Sou um desenvolvedor com 5 anos de sólido conhecimento em tecnologias de desenvolvimento web e backend, infraestrutura de TI e ambientes de nuvem.</p>
-                    <p>Possuo experiência avançada em HTML5, CSS3, JavaScript e TypeScript, além de trabalhar com frameworks populares como Laravel, Node.js e React.js.</p>
-                    <p>No campo de bancos de dados, sou proficiente em MySQL, Oracle SQL e SQL Server, utilizando essas tecnologias para desenvolver soluções escaláveis e de alto desempenho.</p>
-                    <p>Minhas habilidades em linguagens de programação incluem Python, Java (versão 11+), C# e PHP, que aplico em projetos diversos, abrangendo desde o desenvolvimento web até o backend.</p>
-                </div>
-                
-                <div className='art-txt2'>
-                    <h3>Infraestrutura</h3>
-                    <p>Na área de infraestrutura, sou especialista com 3 anos em ferramentas e serviços de segurança e gerenciamento, incluindo Intune, Microsoft Entra ID, Azure Active Directory, controle de domínio e Microsoft EDR.</p>
-                    <p>Tenho vasta experiência em ambientes de nuvem como Azure, Oracle Cloud e AWS, e no gerenciamento e configuração de redes físicas e virtuais, além de servidores e serviços essenciais para o bom funcionamento de sistemas corporativos.</p>
-                </div>
 
-                <div className='art-txt3'>
-                    <h3>Ferramentas</h3>
-                    <p>Minha atuação inclui o uso de ferramentas colaborativas e de suporte, como Jira para gestão de projetos, Quest Kace para controle de inventário e suporte de TI, TeamViewer para acesso remoto, e soluções de segurança como McAfee.</p> 
-                    <p>Com uma abordagem analítica e proativa, busco sempre otimizar e integrar soluções para gerar resultados sólidos e confiáveis.</p>
-                </div>
+    const [texts, setTexts] = useState(["", "", ""]);
+    const fullTexts = [
+        "Thomas Neves.",
+        "Sou um desenvolvedor experiente com forte conhecimento em tecnologias de desenvolvimento web e infraestrutura de TI.",
+        "Minhas habilidades incluem:",
+        "Desenvolvimento Full Stack.", "Infraestrutura em Nuvem.", "Gerenciamento de projetos."
+    ];
+    const typingSpeed = 50; 
+    
+    useEffect(() => {
+        const textIndexes = Array(fullTexts.length).fill(0); 
+        const intervalIds = []; 
+        const typeEffect = (index) => {
+            if (textIndexes[index] < fullTexts[index].length) {
+                setTexts((prevTexts) => {
+                    const updatedTexts = [...prevTexts];
+                    updatedTexts[index] = fullTexts[index].slice(0, textIndexes[index] + 1);
+                    return updatedTexts;
+                });
+                textIndexes[index]++;
+            } else {
+                clearInterval(intervalIds[index]); 
+            }
+        };
+
+        fullTexts.forEach((_, i) => {
+            intervalIds[i] = setInterval(() => typeEffect(i), typingSpeed);
+        });
+
+        return () => {
+            intervalIds.forEach((id) => clearInterval(id)); 
+        };
+    }, []);
+
+    return (
+        <section className="about" id="about-me">
+            <div className="about-image">
+            <img className="picperf" src={thomasimage} alt="Foto de Perfil" />
             </div>
+            <div className="about-text">
+            <h1 className="animated-text">{texts[0]}<span className="cursor"></span></h1>
+            
+            <p>{texts[1]}</p>
+            <p>{texts[2]}</p>
+            <ul>
+            {texts[3] && texts[3].split(", ").map((skill, index) => (<li key={index}>{skill}</li>))}
+            {texts[4] && texts[4].split(", ").map((skill, index) => (<li key={index}>{skill}</li>))}
+            {texts[5] && texts[5].split(", ").map((skill, index) => (<li key={index}>{skill}</li>))}
+
+            </ul>
+            </div>
+
+            
+
         </section>
     );
 }

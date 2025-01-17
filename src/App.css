@@ -1,5 +1,5 @@
 /* App.css */
-body {
+/*body {
     font-family: "Doto", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
@@ -129,4 +129,99 @@ h2 {
     }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');*/
+
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(31, 41, 55, 0.5);
+    color: white;
+    padding: 1rem 2rem;
+    position: fixed;
+    height: 4%;
+    width: 100%;
+    margin-top: -18%;
+}
+
+.header h1 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.nav button {
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #2563eb;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-Radius: 15%;
+}
+
+.nav button:hover {
+    background: #1e40af;
+}
+.picperf{
+    width: 150px;
+    height: 150px;
+    border: 2px solid #7B68EE;
+    padding: 5px;
+    margin-right: 50px;
+    border-Radius: 15%;
+    box-Shadow: 0 0 10px #1e40af, 0 0 20px #1e40af, 0 0 30px #1e40af, 0 0 40px #1e40af, 0 0 50px #1e40af;
+}
+
+.about{
+    display: flex;
+}
+
+.cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1.2em;
+    background-color: #333;
+    animation: blink 0.6s steps(2, start) infinite;
+  }
+
+@keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+.about, .skills, .projects, .contact {
+    padding: 2rem 8%;
+    max-width: 80%;
+    margin: 0 auto;
+    margin-top: 18%;
+    background-color: rgb(37,99,235, 0.2);
+    align-items: center;
+    scroll-margin-top: 20%;
+}
+
+.about h2, .skills h2, .projects h2, .contact h2 {
+    color: #2563eb;
+    margin-bottom: 1rem;
+}
+
+footer {
+    text-align: center;
+    background: #1f2937;
+    color: white;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
