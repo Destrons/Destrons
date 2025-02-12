@@ -6,9 +6,9 @@ function About() {
     const [texts, setTexts] = useState(["", "", ""]);
     const fullTexts = [
         "Thomas Neves.",
-        "Sou um desenvolvedor experiente com forte conhecimento em tecnologias de desenvolvimento web e infraestrutura de TI.",
+        "Bem vindo a minha pagina, aqui você tera alguns conhecimentos sobre minha carreira, projetos e atividades",
         "Minhas habilidades incluem:",
-        "Desenvolvimento Full Stack.", "Infraestrutura em Nuvem.", "Gerenciamento de projetos."
+        "✅ Desenvolvimento Full Stack – Criação de aplicações completas do frontend ao backend.", "✅ Infraestrutura em Nuvem – Implementação e gerenciamento de soluções escaláveis na nuvem.", "✅ Gerenciamento de Projetos – Planejamento e execução de projetos com foco em eficiência e qualidade."
     ];
     const typingSpeed = 50; 
     

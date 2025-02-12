@@ -1,176 +1,85 @@
-/* App.css */
-/*body {
-    font-family: "Doto", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    font-variation-settings: "ROND" 0;
-    background-image: url('./assets/glowing_circuit_lines-efects.gif');
-    background-size: cover;
-    background-repeat: no-repeat; 
-    background-position: center; 
-}
-h2, h3{
-    font-weight: 900;
-}
-
-header, footer {
-    background-image: url('./assets/circuit-lines.png');
-    background-size: cover;
-    justify-content: space-between;
-    padding: 20px;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    text-align: center;
-    padding: 20px;
-    background-color: #333 0.1;
-    color: white;
-}
-
-header{
-    box-shadow: 0 5px 10px rgba(75, 0, 130, 0.8);
-    border-bottom: 2px solid #7B68EE;
-}
-.header-left{
-    margin-left: 15%;
-    width: 75%;
-    background-color: black;
-    border: 2px solid #7B68EE;
-    padding: 5px;
-    border-Radius: 10%;
-    box-Shadow: 0 0 10px #4B0082, 0 0 20px #4B0082, 0 0 30px #4B0082, 0 0 40px #4B0082, 0 0 50px #4B0082;
-}
-.header-right{
-    margin-right: 15%;
-    width: 25%;
-
-}
-.header-left, .header-right {
-    align-items: center;
-}
-.title-txt{
-    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
-}
-.picperf{
-    width: 150px;
-    height: 150px;
-    border: 2px solid #7B68EE;
-    padding: 5px;
-    border-Radius: 35%;
-    box-Shadow: 0 0 10px #4B0082, 0 0 20px #4B0082, 0 0 30px #4B0082, 0 0 40px #4B0082, 0 0 50px #4B0082;
-}
-
-.navbtt{
-    color: white;
-    background-color: #4B0082;
-    margin: 0 5px 0 5px;
-    width: 100px;
-    border-radius: 10%;
-    border: 1px solid grey;
-    box-Shadow: 0 0 5px #4B0082, 0 0 10px #4B0082, 0 0 15px #4B0082, 0 0 20px #4B0082, 0 0 25px #4B0082;
-}
-
-.about, .skills, .contact{
- text-align: center;
-}
-
-.art-txt1, .art-txt2, .art-txt3, .art-skl1, .art-skl2{
-    width: 33%;
-    text-align: left;
-    padding-left: 20px;
-    margin: 0 5px 0 5px;
-    border: 1px solid grey;
-    box-Shadow: 0 0 5px white, 0 0 5px white, 0 0 5px white, 0 0 5px white, 0 0 5px white;
-    margin-bottom: 10px;
-}
-.art-txt1, .art-skl1{
-    
-    border-top-left-radius: 10%;
-}
-.art-txt3, .art-skl2{
-    border-bottom-right-radius: 10%;
-}
-.art-skl1, .art-skl2{
-    width: 50%;
-}
-
-section {
-    padding: 20px;
-    margin: 30px 20px 30px 20px;
-    background-color: white;
-    border-top-left-radius: 10%;
-    border-bottom-right-radius: 10%;
-    border: 2px solid #7B68EE;
-    box-Shadow: 0 0 5px #4B0082, 0 0 10px #4B0082, 0 0 15px #4B0082, 0 0 20px #4B0082, 0 0 25px #4B0082;
-    background-color: black;
-    color:white;
-}
-
-h2 {
-    border-bottom: 2px solid #333;
-    padding-bottom: 10px;
-}
-
-@media (max-width: 768px) {
-    body {
-        font-size: 0.9em;
-    }
-    header, footer {
-        padding: 15px;
-    }
-    .picperf{
-        width: 50px;
-        height: 50px;
-        border: 2px solid #7B68EE;
-        padding: 5px;
-        border-Radius: 35%;
-        box-Shadow: 0 0 10px #4B0082, 0 0 20px #4B0082, 0 0 30px #4B0082, 0 0 40px #4B0082, 0 0 50px #4B0082;
-    }
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');*/
-
-/* styles.css */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
-    color: #333;
 }
 
+#dark-mode-toggle {
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #333;
+    color: white; 
+}
+.dark-mode {
+    background: black;
+    color: white;
+    header {
+        background: rgba(123, 161, 214, 0.5);
+        color: white;
+    }
+    .nav button {
+        background-color: rgb(13, 47, 121);
+        color: white;
+        border-bottom: 3px solid #fff;
+    }
+    button:hover {
+    transition: all 1.35s;
+    background: #1e40af;
+    border-bottom: 3px solid #00FF00;
+    color: #00FF00;
+    }
+}
+.dark-mode #dark-mode-toggle {
+    background-color: white;
+    color: black;
+}
 header {
+    padding-left: 2%;
+    padding-top: 0.2%;
     display: flex;
+    top: 0;
     justify-content: space-between;
     align-items: center;
     background: rgb(31, 41, 55, 0.5);
     color: white;
-    padding: 1rem 2rem;
     position: fixed;
-    height: 4%;
+    height: 8%;
     width: 100%;
-    margin-top: -18%;
+}
+.nav{
+    width: 50%;
+    height: 100%;
 }
 
-.header h1 {
-    font-size: 1.8rem;
-    margin: 0;
+.navdiv {
+    position: relative;
+    bottom: 0;
 }
+
 
 .nav button {
-    margin: 0 0.5rem;
-    padding: 0.5rem 1rem;
-    background: #2563eb;
-    color: white;
+    font-size: 18px;
+    margin: 0 1px;
+    padding:  3% 5%;
+    padding-bottom: 0;
+    background-color: rgb(124, 160, 236);
+    color: black;
     border: none;
     cursor: pointer;
-    border-Radius: 15%;
+    height: 100%;
+    letter-spacing: 1.5px;
+    border-bottom: 3px solid #000;
 }
 
-.nav button:hover {
+button:hover {
+    transition: all 1.35s;
     background: #1e40af;
+    border-bottom: 3px solid #00FF00;
+    color: #00FF00;
 }
+
 .picperf{
     width: 150px;
     height: 150px;
@@ -202,14 +111,43 @@ header {
     }
   }
 
+  .carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.carousel {
+    overflow: hidden;
+    width: 300px;
+    height: 150px;
+}
+
+.carousel ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel li {
+    min-width: 100%;
+    padding: 20px;
+    background: #eee;
+    border-radius: 10px;
+    text-align: center;
+}
+
 .about, .skills, .projects, .contact {
     padding: 2rem 8%;
     max-width: 80%;
-    margin: 0 auto;
+    margin: 20% auto 0 auto;
     margin-top: 18%;
     background-color: rgb(37,99,235, 0.2);
     align-items: center;
-    scroll-margin-top: 20%;
 }
 
 .about h2, .skills h2, .projects h2, .contact h2 {
