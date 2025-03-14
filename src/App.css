@@ -1,4 +1,8 @@
 body {
+    background-image: url("assets/coding-by-the-sea-day.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
@@ -15,26 +19,37 @@ body {
 .dark-mode {
     background: black;
     color: white;
-    header {
-        background: rgba(123, 161, 214, 0.5);
-        color: white;
-    }
-    .nav button {
-        background-color: rgb(13, 47, 121);
-        color: white;
-        border-bottom: 3px solid #fff;
-    }
-    button:hover {
+}
+
+.dark-mode body{
+    background-image: url("assets/coding-by-the-sea-day.jpeg");
+    background-repeat: no-repeat;
+    background-position: fixed;
+    background-size: 100%;
+}
+
+.dark-mode header {
+    background: rgba(123, 161, 214, 0.5);
+    color: white;
+}
+
+.dark-mode button:hover {
     transition: all 1.35s;
     background: #1e40af;
     border-bottom: 3px solid #00FF00;
     color: #00FF00;
-    }
+}
+
+.dark-mode .nav button {
+    background-color: rgb(13, 47, 121);
+    color: white;
+    border-bottom: 3px solid #fff;
 }
 .dark-mode #dark-mode-toggle {
     background-color: white;
     color: black;
 }
+
 header {
     padding-left: 2%;
     padding-top: 0.2%;
