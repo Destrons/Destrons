@@ -40,8 +40,9 @@ section {
     padding: 2rem 8%;
     max-width: 80%;
     margin: 10% auto 0 auto; 
-    background-color: rgb(37,99,235, 0.2);
+    background-color: rgba(180, 200, 250, 0.9);
     align-items: center;
+    border-radius: 15px;
 }
 
 header{
@@ -51,7 +52,7 @@ header{
     top: 0;
     justify-content: space-between;
     align-items: center;
-    background: rgb(31, 41, 55, 0.5);
+    background-color: rgba(180, 200, 250, 0.9);
     color: white;
     position: fixed;
     height: 8%;
@@ -105,7 +106,12 @@ button:hover {
 }
 
 .dark-mode header {
-    background: rgba(123, 161, 214, 0.5);
+    background: rgba(120, 160, 210, 0.9);
+    color: white;
+}
+
+.dark-mode section {
+    background: rgba(120, 160, 210, 0.9);
     color: white;
 }
 
@@ -128,6 +134,11 @@ button:hover {
 
 /* Fim modo escuro */
 
+.about-me{
+    display: flex;
+    flex-direction: column;
+}
+
 .picperf{
     width: 150px;
     height: 150px;
@@ -140,8 +151,8 @@ button:hover {
 
 footer{
     text-align: center;
-    background: #1f2937;
-    color: white;
+    background-color: rgba(180, 200, 250, 0.9);
+    color: black;
     padding: 1rem;
     margin-top: 2rem;
 }
