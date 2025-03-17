@@ -1,0 +1,11 @@
+meu-projeto/
+│
+├── index.html         # Página principal (obrigatória)
+├── css/
+│   └── style.css      # Arquivo de estilos
+├── js/
+│   └── script.js      # Arquivo de JavaScript (opcional)
+├── assets/
+│   ├── img/           # Pasta para imagens
+│   └── docs/          # Outros arquivos como PDFs (opcional)
+└── README.md          # Descrição do projeto (opcional, mas recomendado)

@@ -2,15 +2,140 @@
 <html lang="pt-br">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#000000">
-    <meta name="description" content="Web site created using create-react-app">
+    <meta name="description" content="Web site criado para apresentar dados de desenvolvedor">
+    <meta name="Autor" content="Thomas Neves Pereira">
+    <link rel="stylesheet" href="src/css/style.css">
     <link rel="icon" href="">
     <title>Thomas Neves</title>
-    <link href="/Destrons/static/css/main.css" rel="stylesheet">
 </head>
 <body>
-    <div id="root"></div>
-    <script defer="defer" src="/Destrons/static/js/main.js"></script>
+    <div class="background">
+        <!-- Tela de fundo statica -->
+    </div>
+    <div class="content">
+    <header>
+        <nav>
+            <button onClick="scrollToSection('about-me')">About Me</button>
+            <button onClick="scrollToSection('skills')">Skills</button>
+            <button onClick="scrollToSection('projects')">Projects</button>
+            <button onClick="scrollToSection('contacts')">Contact</button>
+        </nav>
+        <div class="navdiv" style="display: flex; justify-content: flex-end; margin-right: 4%;">
+            <button id="dark-mode-toggle">🌙 Modo Escuro
+                <!-- {darkMode ? "☀️ Modo Claro" : "🌙 Modo Escuro"} -->
+            </button>
+            <script src="src/js/darkmode.js"></script>
+        </div>
+    </header>
+
+    <section id="about">
+        <div>
+            <!-- <img src="src/assets/thomas.png" alt="Foto de Perfil"> -->
+        </div>
+        <div>
+            <h4>Thomas Neves</h4>
+            <p>Bem vindo a minha pagina, aqui você tera alguns conhecimentos sobre minha carreira, projetos e atividades.</p>
+            <p>Minhas habilidades incluem:</p>
+            <p>✅ Desenvolvimento Full Stack – Criação de aplicações completas do frontend ao backend.</p>
+            <p>✅ Infraestrutura em Nuvem – Implementação e gerenciamento de soluções escaláveis na nuvem.</p>
+            <p>✅ Gerenciamento de Projetos – Planejamento e execução de projetos com foco em eficiência e qualidade.</p>
+        </div>  
+    </section>
+
+    <section id="projects">
+        <h3>Projetos</h3>
+        <ul>
+            <li>
+                <h4>
+                    SaaS-wpp-IA
+                </h4>
+                <p>
+                    Este projeto é uma integração com ChatGPT através do WhatsApp,
+                     onde foi criado um assistente virtual para auxiliar na agenda pessoal.
+                      Ele permite criar, alterar e excluir atividades futuras, além de enviar lembretes.
+                </p>
+            </li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+    </section>
+
+    <section id="skills">
+        <table>
+            <caption><h3>Skills</h3></caption>
+            <thead>
+              <tr>
+                <th>Web developer</th>
+                <th>Frameworks</th>
+                <th>Programming Language</th>
+                <th>Database</th>
+                <th>Tools</th>
+                <th>Infrastructure</th>
+                <th>Tools</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>HTML5</td>
+                <td>Laravel</td>
+                <td>Java (Version 11+)</td>
+                <td>MySQL</td>
+                <td>Git and GitHub</td>
+                <td>Intune</td>
+                <td>Jira</td>
+              </tr>
+              <tr>
+                <td>CSS3</td>
+                <td>Node.js</td>
+                <td>Python</td>
+                <td>Oracle SQL</td>
+                <td>Docker</td>
+                <td>Microsoft Entra ID</td>
+                <td>Quest Kace</td>
+              </tr>
+              <tr>
+                <td>JavaScript</td>
+                <td>React.js</td>
+                <td>PHP</td>
+                <td>SQL Server</td>
+                <td></td>
+                <td>Domain controler and Active Directory</td>
+                <td>TeamViewer</td>
+              </tr>
+              <tr>
+                <td>TypeScript</td>
+                <td></td>
+                <td>C#</td>
+                <td></td>
+                <td></td>
+                <td>Microsoft EDR</td>
+                <td>McAfee</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Clouds: Azure, Oracle and AWS</td>
+                <td>Intune</td>
+              </tr>
+            </tbody>
+          </table>
+    </section>
+
+    <section id="contact">
+        <h2>Contato</h2>
+        <p>Email: <a href="mailto:thomas_neves@ymail.com" target="_blank" rel="noopener noreferrer">thomas_neves@ymail.com</a></p>
+        <p>WhatsApp: <a href="https://wa.me/5511967841671" target="_blank" rel="noopener noreferrer">+55 11 96784-1671 (Me chame no WhatsApp)</a></p>
+    </section>
+
+    <footer>
+        <p>© 2024 Thomas Neves Pereira</p>
+    </footer>
+    </div>
 </body>
 </html>
