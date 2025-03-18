@@ -179,14 +179,19 @@ button:hover {
 }
 
 .carousel-slide {
+    display: flex;
+    height: 80%;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
     width: 100%;
+    margin-top: 1%;
     flex-shrink: 0; /* Impede que os slides encolham */
-}
+} 
 
 .carousel-wrapper {
-    display: flex; 
+    display: flex;
     transition: transform 0.5s ease-in-out; 
-    min-height: 95%;
 }
 
 .prev-button, .next-button {
