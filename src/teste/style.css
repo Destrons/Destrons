@@ -1,0 +1,28 @@
+html body{
+    width: 100%;
+    height: 100%;
+}
+.secao-deslizante {
+    transform: translateX(-100%); /* Inicialmente oculto à esquerda */
+    width: 90%;
+    height: 90vh;    
+    background-color: #8284fd;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease-in-out;
+    position: center;
+    text-align: center;
+    /* line-height: 45%; */
+}
+
+.secao-deslizante.centralizada {
+    transform: translateX(0); /* Centralizado */
+}
+
+.secao-deslizante.oculta-esquerda {
+    transform: translateX(-100%); /* Oculto à esquerda */
+}
+
+.secao-deslizante.oculta-direita {
+    transform: translateX(100%); /* Oculto à direita */
+}

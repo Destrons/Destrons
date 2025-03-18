@@ -17,7 +17,7 @@ body{
     transition: background-color 0.5s ease, color 0.5s ease;
 }
 .background {
-    background-image: url('../assets/coding-by-the-sea-day.jpeg');
+    background-image: url('../assets/copia-coding-by-the-sea-day.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -27,7 +27,7 @@ body{
     width: 100%;
     height: 100%;
     z-index: -1; 
-    opacity: 0.8; 
+ 
 }
 
 .content {
@@ -39,7 +39,8 @@ body{
 section {
     padding: 2rem 8%;
     max-width: 80%;
-    margin: 10% auto 0 auto; 
+    height: 65vh;
+    margin: 5% auto 35vh auto; 
     background-color: rgba(180, 200, 250, 0.9);
     align-items: center;
     border-radius: 15px;
@@ -102,7 +103,7 @@ button:hover {
 }
 
 .background.dark-mode-background {
-    background-image: url('../assets/coding-by-the-sea-night.jpeg'); 
+    background-image: url('../assets/copia-coding-by-the-sea-night.jpeg'); 
 }
 
 .dark-mode header {
@@ -134,20 +135,104 @@ button:hover {
 
 /* Fim modo escuro */
 
-.about-me{
+/* Inicio sessão deslizante */
+
+/* .secao-deslizante {
+    transform: translateX(-10%);
+    transition: transform 0.5s ease-in-out;
+}
+
+.secao-deslizante.oculta {
+    transform: translateX(100%) translateX(-50%); 
+}*/
+
+/* Fim sessão deslizante */
+
+.section-container{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    align-items: center;
 }
 
 .picperf{
-    width: 150px;
-    height: 150px;
+    margin-top: 15%;
+    width: 250px;
+    height: 250px;
+}
+
+.boxshadow{
     border: 2px solid #7B68EE;
     padding: 5px;
     margin-right: 50px;
     border-Radius: 15%;
     box-Shadow: 0 0 10px #1e40af, 0 0 20px #1e40af, 0 0 30px #1e40af, 0 0 40px #1e40af, 0 0 50px #1e40af;
 }
+
+/*Inicio carousel*/
+
+.carousel-container {
+    overflow: hidden; 
+    position: relative; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-slide {
+    width: 100%;
+    flex-shrink: 0; /* Impede que os slides encolham */
+}
+
+.carousel-wrapper {
+    display: flex; 
+    transition: transform 0.5s ease-in-out; 
+    min-height: 95%;
+}
+
+.prev-button, .next-button {
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+}
+
+.div-prev-button, .div-next-button{
+    width: 5%;
+    text-align: center;
+    height: 100%;
+}
+
+
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.indicator {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: 0 5px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.indicator.active {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Fim carousel */
 
 footer{
     text-align: center;
