@@ -160,12 +160,12 @@ button:hover {
     margin-top: 15%;
     width: 250px;
     height: 250px;
+    margin-right: 50px;
 }
 
 .boxshadow{
     border: 2px solid #7B68EE;
     padding: 5px;
-    margin-right: 50px;
     border-Radius: 15%;
     box-Shadow: 0 0 10px #1e40af, 0 0 20px #1e40af, 0 0 30px #1e40af, 0 0 40px #1e40af, 0 0 50px #1e40af;
 }
@@ -178,21 +178,22 @@ button:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out; 
+}
+
 .carousel-slide {
     display: flex;
-    height: 80%;
+    height: 51vh;
     flex-direction: column;
     text-align: center;
     align-items: center;
     width: 100%;
     margin-top: 1%;
     flex-shrink: 0; /* Impede que os slides encolham */
+    overflow: auto;
 } 
-
-.carousel-wrapper {
-    display: flex;
-    transition: transform 0.5s ease-in-out; 
-}
 
 .prev-button, .next-button {
     position: relative;
@@ -207,13 +208,25 @@ button:hover {
     width: 100%;
 }
 
+.prev-button{
+    border-top-left-radius: 10%;
+    border-bottom-left-radius: 10%;
+}
+.next-button{
+    border-top-right-radius: 10%;
+    border-bottom-right-radius: 10%;
+}
+
 .div-prev-button, .div-next-button{
     width: 5%;
     text-align: center;
     height: 100%;
 }
 
-
+.carousel-content-project{
+    display: flex;
+    flex-direction: row;
+}
 
 .carousel-indicators {
     position: absolute;
@@ -238,6 +251,44 @@ button:hover {
 }
 
 /* Fim carousel */
+
+ /* Inicio video transposition */
+
+#videoContainer{
+    position: fixed;
+    transform: translate(-50%);
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.8);
+    flex-direction: column;
+    margin-top: -1%;
+}
+
+#imagemDeApresentacao{
+    height: 150px; 
+    width: 250px; 
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.hidden{
+    display: none;
+}
+
+#fecharVideo{
+    position: absolute;
+    top: 3%;
+    right: 1%;
+    font-size: 50px;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    color: white;
+    border: none; 
+    border-radius: 20%;
+}
+
+ /* Fim video transpo transposition */
 
 footer{
     text-align: center;

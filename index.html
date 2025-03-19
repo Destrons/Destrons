@@ -43,20 +43,27 @@
 
     <section id="projects" class="secao-deslizante">
         <div class="section-container carousel-container">
-            <div class="div-prev-button" style="width: 5%; text-align: center;"><button class="prev-button">&#10094;</button></div>
+            <div id="div-prev-button" class="div-prev-button" style="width: 5%; text-align: center;"><button class="prev-button">&#10094;</button></div>
                 <div style="display: flex; flex-direction: column; width: 90%; height: 100%; text-align: center;">
-                        <div style="height: 10%; background-color:rgba(0, 0, 0, 0.5); color: white;"><h2>Projetos</h2></div> 
+                        <div style="height: 10%; background-color:rgba(0, 0, 0, 0.5); color: white;padding-bottom: 15px;"><h2>Projetos</h2></div> 
                         <div class="carousel-wrapper">    
                             <div class="carousel-slide">
-                                <div class="">
-                                    <iframe width="280" height="155" src="https://www.youtube.com/embed/TSaOCXBF1Uo?si=zcDMWDIbkGjD9fJq" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                </div>
                                 <div>
+                                    <img id="imagemDeApresentacao" class="boxshadow" src="src/assets/whatsapp-ia-2.jpeg" alt="SaaS-wpp-IA">
+                                    <div id="videoContainer" class="hidden">
+                                        <iframe id="videoplayer" style="width: 50%; height: 100%;" src="https://www.youtube.com/embed/TSaOCXBF1Uo?si=zcDMWDIbkGjD9fJq" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                        <button id="fecharVideo">X</button>
+                                    </div>
+                                </div>
+                                <div id="conteudoDeapresentação" class=" ">
                                     <div><h3>SaaS-wpp-IA</h3></div>
                                     <div><h4>Serviço automatico de atedimento por WhatsApp</h4></div>
-                                    <div>
+                                    <div class="carousel-content-project">
                                         <div>
-                                            Recursos
+                                            <h5>Recursos</h5>
+                                            <p>Funcionalidade 1: Novos números terão uma mensagem de boas vindas e serão cadastrados em sistemas.</p>
+                                            <p>Funcionalidade 2: pelo WhatsApp poderão efetuar comprar de produto ou conteudo com uma base de conversa.</p>
+                                            <p>Funcionalidade 3: Tera uma configuração de chamada periodica para contatos que não efetuarem aquisição.</p>
                                         </div>
                                         <div>
                                             <h5>Tecnologias e ferramentas</h5>
@@ -68,32 +75,112 @@
                                 </div>                     
                             </div>
                             <div class="carousel-slide">
-                                <div>Apresentação</div>
-                                <div>
-                                    <div><h3>Gerador de Números</h3></div>
-                                    <div>conteudo</div>
-                                </div> 
+                                <!-- <div>
+                                    <img id="imagemDeApresentacao" class="boxshadow" src="src/assets/whatsapp-ia-2.jpeg" alt="SaaS-wpp-IA">
+                                    <div id="videoContainer" class="hidden">
+                                        <iframe id="videoplayer" style="width: 50%; height: 100%;" src="https://www.youtube.com/embed/TSaOCXBF1Uo?si=zcDMWDIbkGjD9fJq" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                        <button id="fecharVideo">X</button>
+                                    </div>
+                                </div>
+                                <div id="conteudoDeapresentação" class=" ">
+                                    <div><h3>SaaS-wpp-IA</h3></div>
+                                    <div><h4>Serviço automatico de atedimento por WhatsApp</h4></div>
+                                    <div class="carousel-content-project">
+                                        <div>
+                                            <h5>Recursos</h5>
+                                            <p>Funcionalidade 1: Novos números terão uma mensagem de boas vindas e serão cadastrados em sistemas.</p>
+                                            <p>Funcionalidade 2: pelo WhatsApp poderão efetuar comprar de produto ou conteudo com uma base de conversa.</p>
+                                            <p>Funcionalidade 3: Tera uma configuração de chamada periodica para contatos que não efetuarem aquisição.</p>
+                                        </div>
+                                        <div>
+                                            <h5>Tecnologias e ferramentas</h5>
+                                            <p>Linguagens: PHP,</p>
+                                            <p>Frameworks/Bibliotecas: Laravel (Cachier),</p>
+                                            <p>Outras Tecnologias: Twilio, Stripe</p>
+                                        </div>
+                                    </div>
+                                </div>  -->
                             </div>
                             <div class="carousel-slide">
-                                <div>Apresentação</div>
-                                <div>
-                                    <div>Projeto Rede Social</div>
-                                    <div>conteudo</div>
-                                </div> 
+                                <!-- <div>
+                                    <img id="imagemDeApresentacao" class="boxshadow" src="src/assets/whatsapp-ia-2.jpeg" alt="SaaS-wpp-IA">
+                                    <div id="videoContainer" class="hidden">
+                                        <iframe id="videoplayer" style="width: 50%; height: 100%;" src="https://www.youtube.com/embed/TSaOCXBF1Uo?si=zcDMWDIbkGjD9fJq" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                        <button id="fecharVideo">X</button>
+                                    </div>
+                                </div>
+                                <div id="conteudoDeapresentação" class=" ">
+                                    <div><h3>SaaS-wpp-IA</h3></div>
+                                    <div><h4>Serviço automatico de atedimento por WhatsApp</h4></div>
+                                    <div class="carousel-content-project">
+                                        <div>
+                                            <h5>Recursos</h5>
+                                            <p>Funcionalidade 1: Novos números terão uma mensagem de boas vindas e serão cadastrados em sistemas.</p>
+                                            <p>Funcionalidade 2: pelo WhatsApp poderão efetuar comprar de produto ou conteudo com uma base de conversa.</p>
+                                            <p>Funcionalidade 3: Tera uma configuração de chamada periodica para contatos que não efetuarem aquisição.</p>
+                                        </div>
+                                        <div>
+                                            <h5>Tecnologias e ferramentas</h5>
+                                            <p>Linguagens: PHP,</p>
+                                            <p>Frameworks/Bibliotecas: Laravel (Cachier),</p>
+                                            <p>Outras Tecnologias: Twilio, Stripe</p>
+                                        </div>
+                                    </div>
+                                </div>  -->
                             </div>
                             <div class="carousel-slide">
-                                <div>Apresentação</div>
-                                <div>
-                                    <div>Projeto Financeiro</div>
-                                    <div>conteudo</div>
-                                </div> 
+                                <!-- <div>
+                                    <img id="imagemDeApresentacao" class="boxshadow" src="src/assets/whatsapp-ia-2.jpeg" alt="SaaS-wpp-IA">
+                                    <div id="videoContainer" class="hidden">
+                                        <iframe id="videoplayer" style="width: 50%; height: 100%;" src="https://www.youtube.com/embed/TSaOCXBF1Uo?si=zcDMWDIbkGjD9fJq" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                        <button id="fecharVideo">X</button>
+                                    </div>
+                                </div>
+                                <div id="conteudoDeapresentação" class=" ">
+                                    <div><h3>SaaS-wpp-IA</h3></div>
+                                    <div><h4>Serviço automatico de atedimento por WhatsApp</h4></div>
+                                    <div class="carousel-content-project">
+                                        <div>
+                                            <h5>Recursos</h5>
+                                            <p>Funcionalidade 1: Novos números terão uma mensagem de boas vindas e serão cadastrados em sistemas.</p>
+                                            <p>Funcionalidade 2: pelo WhatsApp poderão efetuar comprar de produto ou conteudo com uma base de conversa.</p>
+                                            <p>Funcionalidade 3: Tera uma configuração de chamada periodica para contatos que não efetuarem aquisição.</p>
+                                        </div>
+                                        <div>
+                                            <h5>Tecnologias e ferramentas</h5>
+                                            <p>Linguagens: PHP,</p>
+                                            <p>Frameworks/Bibliotecas: Laravel (Cachier),</p>
+                                            <p>Outras Tecnologias: Twilio, Stripe</p>
+                                        </div>
+                                    </div>
+                                </div>  -->
                             </div>
                             <div class="carousel-slide">
-                                <div>Apresentação</div>
-                                <div>
-                                    <div>Game em Lua</div>
-                                    <div>conteudo</div>
-                                </div> 
+                                <!-- <div>
+                                    <img id="imagemDeApresentacao" class="boxshadow" src="src/assets/whatsapp-ia-2.jpeg" alt="SaaS-wpp-IA">
+                                    <div id="videoContainer" class="hidden">
+                                        <iframe id="videoplayer" style="width: 50%; height: 100%;" src="https://www.youtube.com/embed/TSaOCXBF1Uo?si=zcDMWDIbkGjD9fJq" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                        <button id="fecharVideo">X</button>
+                                    </div>
+                                </div>
+                                <div id="conteudoDeapresentação" class=" ">
+                                    <div><h3>SaaS-wpp-IA</h3></div>
+                                    <div><h4>Serviço automatico de atedimento por WhatsApp</h4></div>
+                                    <div class="carousel-content-project">
+                                        <div>
+                                            <h5>Recursos</h5>
+                                            <p>Funcionalidade 1: Novos números terão uma mensagem de boas vindas e serão cadastrados em sistemas.</p>
+                                            <p>Funcionalidade 2: pelo WhatsApp poderão efetuar comprar de produto ou conteudo com uma base de conversa.</p>
+                                            <p>Funcionalidade 3: Tera uma configuração de chamada periodica para contatos que não efetuarem aquisição.</p>
+                                        </div>
+                                        <div>
+                                            <h5>Tecnologias e ferramentas</h5>
+                                            <p>Linguagens: PHP,</p>
+                                            <p>Frameworks/Bibliotecas: Laravel (Cachier),</p>
+                                            <p>Outras Tecnologias: Twilio, Stripe</p>
+                                        </div>
+                                    </div>
+                                </div>  -->
                             </div>
                         </div>
                         <div class="carousel-indicators">
@@ -104,7 +191,7 @@
                             <div class="indicator" data-index="4">5</div>
                         </div>
                 </div>             
-            <div class="div-next-button"><button class="next-button">&#10095;</button></div>
+            <div id="div-next-button" class="div-next-button"><button class="next-button">&#10095;</button></div>
         </div>
     </section>
 

@@ -93,3 +93,42 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Fim carousel
+
+// Inicio video transpo
+
+const imagem = document.getElementById('imagemDeApresentacao');
+const conteudo = document.getElementById('conteudoDeapresentação');
+const videoContainer = document.getElementById('videoContainer');
+const video = document.getElementById('videoapresentacao');
+const botaoFechar = document.getElementById('fecharVideo');
+const prevButton = document.getElementById('div-prev-button');
+const nextButton = document.getElementById('div-next-button');
+const videoPlayer = document.getElementById('videoplayer');
+
+imagem.addEventListener('click', () => {
+    videoContainer.classList.remove('hidden');
+    imagem.classList.add('hidden');
+    conteudo.classList.add('hidden');
+    
+});
+
+botaoFechar.addEventListener('click', () => {
+    videoContainer.classList.add('hidden');
+    imagem.classList.remove('hidden');
+    conteudo.classList.remove('hidden');
+    videoPlayer.pause();
+});
+
+prevButton.addEventListener('click', () => {
+    videoContainer.classList.add('hidden');
+    imagem.classList.remove('hidden');
+    conteudo.classList.remove('hidden');
+});
+
+nextButton.addEventListener('click', () => {
+    videoContainer.classList.add('hidden');
+    imagem.classList.remove('hidden');
+    conteudo.classList.remove('hidden');
+});
+
+// Fim video transpo
