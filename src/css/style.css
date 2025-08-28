@@ -1,4 +1,4 @@
-html body{
+/* html body{
     height: 100%;
     width: 100%;
     margin: 0;
@@ -7,294 +7,374 @@ html body{
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
-  }
+} */
 
-body{
-    transition: background-color 0.5s ease, color 0.5s ease;
-}
-.background {
-    background-image: url('../assets/copia-coding-by-the-sea-day.jpeg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    position: fixed; 
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; 
- 
+.color{
+    /*Dark Mode: Preto e Roxo*/
+    color: #120A1E; /*Preto Profundo*/
+    color: #6A0DAD; /*Roxo Vibrante*/
+    color: #F5F5F5; /*Branco Neutro*/
+    color: #CCCCCC; /*Cinza Claro*/
+    color: #9370DB; /*Roxo Suave*/
+    /*Light Mode: Branco e Roxo*/
+    color: #FFFFFF; /*Branco Puro*/
+    color: #4B0082; /*Roxo Intenso*/
+    color: #333333; /*Preto Suave*/
+    color: #808080; /*Cinza Médio*/
+    color: #CFC0E8; /*Roxo Lavanda*/
 }
 
-.content {
-    margin-top: 8%;
-    min-height: 100vh;
-    background-color: rgba(255, 255, 255, 0);
+/* --- CONFIGURAÇÕES GLOBAIS E VARIÁVEIS DE COR --- */
+:root {
+    /* Light Mode (Padrão) */
+    --bg-main: #FFFFFF;
+    --bg-accent: #4B0082;
+    --text-primary: #333333;
+    --text-secondary: #808080;
+    --elements-minor: #CFC0E8;
+    --card-bg: #f9f9f9;
+    --card-border: #e0e0e0;
+}
+
+[data-theme="dark"] {
+    /* Dark Mode */
+    --bg-main: #120A1E;
+    --bg-accent: #6A0DAD;
+    --text-primary: #F5F5F5;
+    --text-secondary: #CCCCCC;
+    --elements-minor: #9370DB;
+    --card-bg: #1f1235;
+    --card-border: #9370DB;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
 section {
-    padding: 2rem 8%;
-    max-width: 80%;
-    height: 65vh;
-    margin: 5% auto 35vh auto; 
-    background-color: rgba(180, 200, 250, 0.9);
-    align-items: center;
-    border-radius: 15px;
+    padding: 6rem 0;
+    border-bottom: 1px solid var(--elements-minor);
 }
 
-header{
-    padding-left: 2%;
-    padding-top: 0.2%;
-    display: flex;
+section:last-of-type {
+    border-bottom: none;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--bg-accent);
+}
+
+p {
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+a {
+    text-decoration: none;
+    color: var(--bg-accent);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--elements-minor);
+}
+
+/* --- CABEÇALHO E NAVEGAÇÃO --- */
+.header {
+    position: fixed;
+    width: 100%;
     top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(18, 10, 30, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--elements-minor);
+}
+
+.nav {
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(180, 200, 250, 0.9);
-    color: white;
-    position: fixed;
-    height: 8%;
-    width: 100%;
 }
 
-nav {
-    width: 50%;
-    height: 100%;
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #F5F5F5;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: #F5F5F5;
+    font-weight: 600;
+}
+
+/* --- BOTÃO DE TEMA (DARK/LIGHT) --- */
+.theme-switch {
+    background: var(--card-bg);
+    border: 2px solid var(--elements-minor);
+    border-radius: 50px;
+    cursor: pointer;
+    width: 50px;
+    height: 25px;
     position: relative;
-    bottom: 0;
 }
 
-nav button {
-    font-size: 18px;
-    margin: 0 1px;
-    padding:  3% 5%;
-    padding-bottom: 0;
-    background-color: rgb(124, 160, 236);
-    color: black;
-    border: none;
-    cursor: pointer;
-    height: 100%;
-    letter-spacing: 1.5px;
-    border-bottom: 3px solid #000;
-}
-button:hover {
-    transition: all 1.35s;
-    background: #1e40af;
-    border-bottom: 3px solid #00FF00;
-    color: #00FF00;
-}
-
-/* Inicio modo escuro */
-
-#dark-mode-toggle {
-    padding: 10px 20px;
-    font-size: 20px;
-    cursor: pointer;
-    border: none;
-    background-color: #333;
-    color: white; 
-}
-.dark-mode {
-    background: black;
-    color: white;
-}
-
-.background.dark-mode-background {
-    background-image: url('../assets/copia-coding-by-the-sea-night.jpeg'); 
-}
-
-.dark-mode header {
-    background: rgba(120, 160, 210, 0.9);
-    color: white;
-}
-
-.dark-mode section {
-    background: rgba(120, 160, 210, 0.9);
-    color: white;
-}
-
-.dark-mode button:hover {
-    transition: all 1.35s;
-    background: #1e40af;
-    border-bottom: 3px solid #00FF00;
-    color: #00FF00;
-}
-
-.dark-mode .nav button {
-    background-color: rgb(13, 47, 121);
-    color: white;
-    border-bottom: 3px solid #fff;
-}
-.dark-mode #dark-mode-toggle {
-    background-color: rgb(189, 189, 189);
-    color: black;
-}
-
-/* Fim modo escuro */
-
-/* Inicio sessão deslizante */
-
-/* .secao-deslizante {
-    transform: translateX(-10%);
-    transition: transform 0.5s ease-in-out;
-}
-
-.secao-deslizante.oculta {
-    transform: translateX(100%) translateX(-50%); 
-}*/
-
-/* Fim sessão deslizante */
-
-.section-container{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-}
-
-.picperf{
-    margin-top: 15%;
-    width: 250px;
-    height: 250px;
-    margin-right: 50px;
-}
-
-.boxshadow{
-    border: 2px solid #7B68EE;
-    padding: 5px;
-    border-Radius: 15%;
-    box-Shadow: 0 0 10px #1e40af, 0 0 20px #1e40af, 0 0 30px #1e40af, 0 0 40px #1e40af, 0 0 50px #1e40af;
-}
-
-/*Inicio carousel*/
-
-.carousel-container {
-    overflow: hidden; 
-    position: relative; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.carousel-wrapper {
-    display: flex;
-    transition: transform 0.5s ease-in-out; 
-}
-
-.carousel-slide {
-    display: flex;
-    height: 51vh;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    width: 100%;
-    margin-top: 1%;
-    flex-shrink: 0; /* Impede que os slides encolham */
-    overflow: auto;
-} 
-
-.prev-button, .next-button {
-    position: relative;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 20px;
-    z-index: 10;
-    height: 100%;
-    width: 100%;
-}
-
-.prev-button{
-    border-top-left-radius: 10%;
-    border-bottom-left-radius: 10%;
-}
-.next-button{
-    border-top-right-radius: 10%;
-    border-bottom-right-radius: 10%;
-}
-
-.div-prev-button, .div-next-button{
-    width: 5%;
-    text-align: center;
-    height: 100%;
-}
-
-.carousel-content-project{
-    display: flex;
-    flex-direction: row;
-}
-
-.carousel-indicators {
+.theme-switch-toggle {
     position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
+    background: var(--bg-accent);
+    border-radius: 50%;
+    width: 19px;
+    height: 19px;
+    top: 1px;
+    left: 2px;
+    transition: transform 0.3s ease;
 }
 
-.indicator {
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.3);
-    margin: 0 5px;
-    cursor: pointer;
+[data-theme="dark"] .theme-switch-toggle {
+    transform: translateX(25px);
+}
+
+/* --- SEÇÃO HERO --- */
+#hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+}
+
+.hero-content h1 span {
+    color: var(--bg-accent);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 1rem auto 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background-color: var(--bg-accent);
     color: #fff;
 }
 
-.indicator.active {
-    background-color: rgba(0, 0, 0, 0.7);
+.btn-primary:hover {
+    background-color: transparent;
+    border-color: var(--bg-accent);
+    color: var(--bg-accent);
 }
 
-/* Fim carousel */
-
- /* Inicio video transposition */
-
-#videoContainer{
-    position: fixed;
-    transform: translate(-50%);
-    width: 100%; 
-    height: 100%; 
-    background-color: rgba(0, 0, 0, 0.8);
-    flex-direction: column;
-    margin-top: -1%;
+.btn-secondary {
+    background-color: transparent;
+    color: var(--bg-accent);
+    border-color: var(--bg-accent);
+    margin-left: 1rem;
 }
 
-#imagemDeApresentacao{
-    height: 150px; 
-    width: 250px; 
-    margin-top: 15px;
-    cursor: pointer;
+.btn-secondary:hover {
+     background-color: var(--bg-accent);
+     color: #fff;
 }
 
-.hidden{
-    display: none;
+/* --- SEÇÃO SOBRE --- */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
 }
 
-#fecharVideo{
-    position: absolute;
-    top: 3%;
-    right: 1%;
-    font-size: 50px;
-    opacity: 1;
-    background-color: rgba(0, 0, 0, 0);
-    cursor: pointer;
-    color: white;
-    border: none; 
-    border-radius: 20%;
+.about-img img {
+    max-width: 300px;
+    border-radius: 15px;
+    border: 5px solid var(--elements-minor);
 }
 
- /* Fim video transpo transposition */
+.about-text p {
+    margin-bottom: 1rem;
+}
 
-footer{
+/* --- SEÇÃO HABILIDADES --- */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.skill-item {
     text-align: center;
-    background-color: rgba(180, 200, 250, 0.9);
-    color: black;
-    padding: 1rem;
-    margin-top: 2rem;
+    width: 100px;
 }
 
+.skill-item i {
+    font-size: 4rem;
+    color: var(--bg-accent);
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover i {
+    transform: scale(1.1);
+}
+
+.skill-item p {
+    margin-top: 0.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* --- SEÇÃO PROJETOS --- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card-content h3 {
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.project-card-content p {
+    flex-grow: 1;
+}
+
+.project-links {
+    margin-top: 1rem;
+}
+
+.project-links a {
+    margin-right: 1rem;
+    font-weight: 600;
+}
+
+/* --- SEÇÃO CONTATO --- */
+#contact {
+    text-align: center;
+}
+
+#contact p {
+    max-width: 500px;
+    margin: 0 auto 2rem;
+}
+
+.social-links a {
+    font-size: 2rem;
+    margin: 0 1rem;
+    color: var(--text-secondary);
+}
+
+.social-links a:hover {
+    color: var(--bg-accent);
+}
+
+/* --- RODAPÉ --- */
+.footer {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: var(--card-bg);
+    color: var(--text-secondary);
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    
+    .nav-list {
+        display: none; /* Em um projeto real, aqui entraria um menu hamburguer */
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .about-img img {
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container { padding: 0 1rem; }
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .btn-secondary { margin-left: 0; }
+}

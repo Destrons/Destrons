@@ -1,3 +1,44 @@
+Estilo: 
+    cores:
+    ** Dark Mode: Preto e Roxo **
+    Fundo Principal	            Preto Profundo	#120A1E     rgb(18, 10, 30)
+    Destaque (Ações, Botões)	Roxo Vibrante	#6A0DAD	    rgb(106, 13, 173)
+    Texto Principal	            Branco Neutro	#F5F5F5	    rgb(245, 245, 245)
+    Texto Secundário	        Cinza Claro	    #CCCCCC	    rgb(204, 204, 204)
+    Elementos Menores	        Roxo Suave	    #9370DB     rgb(147, 112, 219)
+
+    ** Light Mode: Branco e Roxo **
+    Fundo Principal	            Branco Puro	    #FFFFFF	    rgb(255, 255, 255)
+    Destaque (Ações, Botões)	Roxo Intenso	#4B0082	    rgb(75, 0, 130)
+    Texto Principal	            Preto Suave	    #333333	    rgb(51, 51, 51)
+    Texto Secundário	        Cinza Médio	    #808080	    rgb(128, 128, 128)
+    Elementos Menores	        Roxo Lavanda    #CFC0E8     rgb(207, 192, 232)
+
+    barra de nevegação:
+        botão Dark mode - Light mode
+        Botão fixo expansivo, responsivo.
+            Ao clicar botões de direcionamento de section anteriormente ocultos e apresentado.
+            
+    Cabeçalho:
+
+
+===============================================================================================
+
+Estrutura.
+
+cabeçalho:
+    apresentação de informações básicas
+
+section 1
+    Projetos Feitos
+section 2 
+    Habilidades
+Contato
+    E-mail, Telefone
+rodapé
+    Copyright ©2024 Thomas Neves Pereira
+
+
 meu-projeto/
 │
 ├── index.html         # Página principal (obrigatória)

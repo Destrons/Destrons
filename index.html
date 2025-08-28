@@ -1,275 +1,234 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR" data-theme="dark">
 <head>
-    <meta charset="utf-8">
-    <meta name="description" content="Web site criado para apresentar dados de desenvolvedor">
-    <meta name="Autor" content="Thomas Neves Pereira">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thomas - Desenvolvedor de Software</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="icon" href="src/favico/icone_TN.png">
-    <title>Thomas Neves</title>
 </head>
 <body>
-    <div class="background">
-        <!-- Tela de fundo statica -->
-    </div>
-    <div class="content">
-    <header>
-        <nav>
-            <button onClick="scrollToSection('about-me')">About Me</button>
-            <button onClick="scrollToSection('projects')">Projects</button>
-            <button onClick="scrollToSection('skills')">Skills</button>
-            <button onClick="scrollToSection('contacts')">Contact</button>
+
+    <header class="header">
+        <nav class="container nav">
+            <a href="https://www.linkedin.com/in/thomas-neves-dev/" class="nav-logo">Thomas Neves</a>
+            <ul class="nav-list">
+                <li><a href="#about" class="nav-link">Sobre</a></li>
+                <li><a href="#skills" class="nav-link">Habilidades</a></li>
+                <li><a href="#projects" class="nav-link">Projetos</a></li>
+                <li><a href="#contact" class="nav-link">Contato</a></li>
+            </ul>
+            <div class="theme-switch" id="theme-toggler">
+                <div class="theme-switch-toggle"></div>
+            </div>
         </nav>
-        <div class="navdiv" style="display: flex; justify-content: flex-end; margin-right: 4%;">
-            <button id="dark-mode-toggle">🌙 Modo Escuro</button>
-        </div>
     </header>
 
-    <section id="about-me" class="secao-deslizante">
-        <div class="section-container">        
-            <div style="align-self: center">
-                <img class="picperf boxshadow" src="src/assets/foto de perfil.png" alt="Foto de Perfil">
-                <h1>Thomas Neves Pereira</h1>
+    <main>
+
+        <section id="hero">
+            <div class="container hero-content">
+                <h1>Olá, eu sou <span>Thomas Neves</span></h1>
+                <p>Desenvolvedor de Software apaixonado por criar soluções inovadoras e interfaces incríveis.</p>
+                <p>Gerenciamento de infraestrutura Cloud e redes.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">Ver Projetos</a>
+                    <a href="#contact" class="btn btn-secondary">Entrar em Contato</a>
+                </div>
             </div>
-            <div style="align-self: center">
-                <h1 style="font-size: 30px;">Bem vindo a minha pagina, aqui você tera alguns conhecimentos sobre minha carreira, projetos e atividades.</h1>
-                <p style="font-size: 25px;">Minhas habilidades incluem:</p>
-                <p style="font-size: 20px;">✅ Desenvolvimento Full Stack – Criação de aplicações completas do frontend ao backend.</p>
-                <p style="font-size: 20px;">✅ Infraestrutura em Nuvem – Implementação e gerenciamento de soluções escaláveis na nuvem.</p>
-                <p style="font-size: 20px;">✅ Gerenciamento de Projetos – Planejamento e execução de projetos com foco em eficiência e qualidade.</p>
-            </div>  
-        </div>
-    </section>
+        </section>
 
-    <section id="projects" class="secao-deslizante">
-        <div class="section-container carousel-container">
-            <div id="div-prev-button" class="div-prev-button" style="width: 5%; text-align: center;"><button class="prev-button">&#10094;</button></div>
-                <div style="display: flex; flex-direction: column; width: 90%; height: 100%; text-align: center;">
-                        <div style="height: 10%; background-color:rgba(0, 0, 0, 0.5); color: white;padding-bottom: 15px;"><h2>Projetos</h2></div> 
-                        <div class="carousel-wrapper">    
-                            <div class="carousel-slide">
-                                <div>
-                                    <img id="imagemDeApresentacao" class="boxshadow" src="src/assets/whatsapp-ia-2.jpeg" alt="SaaS-wpp-IA">
-                                    <div id="videoContainer" class="hidden">
-                                        <iframe id="videoplayer" style="width: 50%; height: 100%;" src="https://www.youtube.com/embed/TSaOCXBF1Uo?si=zcDMWDIbkGjD9fJq" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                        <button id="fecharVideo">X</button>
-                                    </div>
-                                </div>
-                                <div id="conteudoDeapresentação" class=" ">
-                                    <div><h3>SaaS-wpp-IA</h3></div>
-                                    <div><h4>Serviço automatico de atedimento por WhatsApp</h4></div>
-                                    <div class="carousel-content-project">
-                                        <div>
-                                            <h5>Recursos</h5>
-                                            <p>Funcionalidade 1: Novos números terão uma mensagem de boas vindas e serão cadastrados em sistemas.</p>
-                                            <p>Funcionalidade 2: pelo WhatsApp poderão efetuar comprar de produto ou conteudo com uma base de conversa.</p>
-                                            <p>Funcionalidade 3: Tera uma configuração de chamada periodica para contatos que não efetuarem aquisição.</p>
-                                        </div>
-                                        <div>
-                                            <h5>Tecnologias e ferramentas</h5>
-                                            <p>Linguagens: PHP,</p>
-                                            <p>Frameworks/Bibliotecas: Laravel (Cachier),</p>
-                                            <p>Outras Tecnologias: Twilio, Stripe</p>
-                                        </div>
-                                    </div>
-                                </div>                     
-                            </div>
-                            <div class="carousel-slide">
-                                <!-- <div>
-                                    <img id="imagemDeApresentacao" class="boxshadow" src="src/assets/whatsapp-ia-2.jpeg" alt="SaaS-wpp-IA">
-                                    <div id="videoContainer" class="hidden">
-                                        <iframe id="videoplayer" style="width: 50%; height: 100%;" src="https://www.youtube.com/embed/TSaOCXBF1Uo?si=zcDMWDIbkGjD9fJq" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                        <button id="fecharVideo">X</button>
-                                    </div>
-                                </div>
-                                <div id="conteudoDeapresentação" class=" ">
-                                    <div><h3>SaaS-wpp-IA</h3></div>
-                                    <div><h4>Serviço automatico de atedimento por WhatsApp</h4></div>
-                                    <div class="carousel-content-project">
-                                        <div>
-                                            <h5>Recursos</h5>
-                                            <p>Funcionalidade 1: Novos números terão uma mensagem de boas vindas e serão cadastrados em sistemas.</p>
-                                            <p>Funcionalidade 2: pelo WhatsApp poderão efetuar comprar de produto ou conteudo com uma base de conversa.</p>
-                                            <p>Funcionalidade 3: Tera uma configuração de chamada periodica para contatos que não efetuarem aquisição.</p>
-                                        </div>
-                                        <div>
-                                            <h5>Tecnologias e ferramentas</h5>
-                                            <p>Linguagens: PHP,</p>
-                                            <p>Frameworks/Bibliotecas: Laravel (Cachier),</p>
-                                            <p>Outras Tecnologias: Twilio, Stripe</p>
-                                        </div>
-                                    </div>
-                                </div>  -->
-                            </div>
-                            <div class="carousel-slide">
-                                <!-- <div>
-                                    <img id="imagemDeApresentacao" class="boxshadow" src="src/assets/whatsapp-ia-2.jpeg" alt="SaaS-wpp-IA">
-                                    <div id="videoContainer" class="hidden">
-                                        <iframe id="videoplayer" style="width: 50%; height: 100%;" src="https://www.youtube.com/embed/TSaOCXBF1Uo?si=zcDMWDIbkGjD9fJq" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                        <button id="fecharVideo">X</button>
-                                    </div>
-                                </div>
-                                <div id="conteudoDeapresentação" class=" ">
-                                    <div><h3>SaaS-wpp-IA</h3></div>
-                                    <div><h4>Serviço automatico de atedimento por WhatsApp</h4></div>
-                                    <div class="carousel-content-project">
-                                        <div>
-                                            <h5>Recursos</h5>
-                                            <p>Funcionalidade 1: Novos números terão uma mensagem de boas vindas e serão cadastrados em sistemas.</p>
-                                            <p>Funcionalidade 2: pelo WhatsApp poderão efetuar comprar de produto ou conteudo com uma base de conversa.</p>
-                                            <p>Funcionalidade 3: Tera uma configuração de chamada periodica para contatos que não efetuarem aquisição.</p>
-                                        </div>
-                                        <div>
-                                            <h5>Tecnologias e ferramentas</h5>
-                                            <p>Linguagens: PHP,</p>
-                                            <p>Frameworks/Bibliotecas: Laravel (Cachier),</p>
-                                            <p>Outras Tecnologias: Twilio, Stripe</p>
-                                        </div>
-                                    </div>
-                                </div>  -->
-                            </div>
-                            <div class="carousel-slide">
-                                <!-- <div>
-                                    <img id="imagemDeApresentacao" class="boxshadow" src="src/assets/whatsapp-ia-2.jpeg" alt="SaaS-wpp-IA">
-                                    <div id="videoContainer" class="hidden">
-                                        <iframe id="videoplayer" style="width: 50%; height: 100%;" src="https://www.youtube.com/embed/TSaOCXBF1Uo?si=zcDMWDIbkGjD9fJq" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                        <button id="fecharVideo">X</button>
-                                    </div>
-                                </div>
-                                <div id="conteudoDeapresentação" class=" ">
-                                    <div><h3>SaaS-wpp-IA</h3></div>
-                                    <div><h4>Serviço automatico de atedimento por WhatsApp</h4></div>
-                                    <div class="carousel-content-project">
-                                        <div>
-                                            <h5>Recursos</h5>
-                                            <p>Funcionalidade 1: Novos números terão uma mensagem de boas vindas e serão cadastrados em sistemas.</p>
-                                            <p>Funcionalidade 2: pelo WhatsApp poderão efetuar comprar de produto ou conteudo com uma base de conversa.</p>
-                                            <p>Funcionalidade 3: Tera uma configuração de chamada periodica para contatos que não efetuarem aquisição.</p>
-                                        </div>
-                                        <div>
-                                            <h5>Tecnologias e ferramentas</h5>
-                                            <p>Linguagens: PHP,</p>
-                                            <p>Frameworks/Bibliotecas: Laravel (Cachier),</p>
-                                            <p>Outras Tecnologias: Twilio, Stripe</p>
-                                        </div>
-                                    </div>
-                                </div>  -->
-                            </div>
-                            <div class="carousel-slide">
-                                <!-- <div>
-                                    <img id="imagemDeApresentacao" class="boxshadow" src="src/assets/whatsapp-ia-2.jpeg" alt="SaaS-wpp-IA">
-                                    <div id="videoContainer" class="hidden">
-                                        <iframe id="videoplayer" style="width: 50%; height: 100%;" src="https://www.youtube.com/embed/TSaOCXBF1Uo?si=zcDMWDIbkGjD9fJq" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                        <button id="fecharVideo">X</button>
-                                    </div>
-                                </div>
-                                <div id="conteudoDeapresentação" class=" ">
-                                    <div><h3>SaaS-wpp-IA</h3></div>
-                                    <div><h4>Serviço automatico de atedimento por WhatsApp</h4></div>
-                                    <div class="carousel-content-project">
-                                        <div>
-                                            <h5>Recursos</h5>
-                                            <p>Funcionalidade 1: Novos números terão uma mensagem de boas vindas e serão cadastrados em sistemas.</p>
-                                            <p>Funcionalidade 2: pelo WhatsApp poderão efetuar comprar de produto ou conteudo com uma base de conversa.</p>
-                                            <p>Funcionalidade 3: Tera uma configuração de chamada periodica para contatos que não efetuarem aquisição.</p>
-                                        </div>
-                                        <div>
-                                            <h5>Tecnologias e ferramentas</h5>
-                                            <p>Linguagens: PHP,</p>
-                                            <p>Frameworks/Bibliotecas: Laravel (Cachier),</p>
-                                            <p>Outras Tecnologias: Twilio, Stripe</p>
-                                        </div>
-                                    </div>
-                                </div>  -->
+        <section id="about">
+            <div class="container">
+                <h2>Sobre Mim</h2>
+                <div class="about-content">
+                    <div class="about-img">
+                        <img src="src/assets/foto de perfil.png" alt="Foto de Thomas Neves">
+                    </div>
+                    <div class="about-text">
+                        <p>
+                            Sou um desenvolvedor backend com mais de 5 anos de experiência no setor de tecnologia, dedicado a criar soluções inovadoras e eficientes.
+                            Minha carreira começou na área de Infraestrutura e Suporte, onde desenvolvi habilidades em gestão de ambientes Windows e Linux, redes e segurança.
+                        </p>
+                        <p>
+                            Essa base me proporcionou uma visão completa do ciclo de vida de um sistema, que hoje aplico no desenvolvimento de software.
+                            Tenho sólida experiência como desenvolvedor backend freelancer, com foco em PHP, Laravel e MySQL.
+                            Além disso, estou sempre em busca de evolução, aprimorando meus conhecimentos em Java, Node.js, Kotlin para desenvolvimento Android e a aplicação de Inteligência Artificial em soluções de negócio.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="container">
+                <h2>Minhas Habilidades</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <i class="fab fa-html5"></i>
+                        <p>HTML5</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-css3-alt"></i>
+                        <p>CSS3</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-js-square"></i>
+                        <p>JavaScript</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-react"></i>
+                        <p>React</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-node-js"></i>
+                        <p>Node.js</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-database"></i>
+                        <p>MySQL</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-java"></i>
+                        <p>Java</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-laravel"></i>
+                        <p>Laravel</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-plus"></i>
+                        <p>Kotlin</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-bug"></i>
+                        <p>Selenium</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-robot"></i>
+                        <p>Automação</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-git-alt"></i>
+                        <p>Git</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-figma"></i>
+                        <p>Figma</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+                <h2>Meus Projetos Publicos</h2>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <img src="src/projetos/SaaS-wpp-IA/assistente-virtual.png" alt="Imagem SaaS-wpp-IA">
+                        <div class="project-card-content">
+                            <h3>SaaS-wpp-IA</h3>
+                            <p>Este projeto de assistente virtual visa o atendimento para pessoas e também empresas.</p>
+                            <p>Com sua disponibilização 24h por dia, os clientes podem entrar em contato e obter respostas a qualquer hora do dia.</p>
+                            <div class="project-links">
+                                <a href="https://www.youtube.com/watch?v=TSaOCXBF1Uo" target="_blank">Ver teste <i class="fas fa-external-link-alt"></i></a>
+                                <a href="https://github.com/Destrons/SaaS-wpp-IA" target="_blank">GitHub <i class="fab fa-github"></i></a>
                             </div>
                         </div>
-                        <div class="carousel-indicators">
-                            <div class="indicator active" data-index="0">1</div>
-                            <div class="indicator" data-index="1">2</div>
-                            <div class="indicator" data-index="2">3</div>
-                            <div class="indicator" data-index="3">4</div>
-                            <div class="indicator" data-index="4">5</div>
+                    </article>
+                    <article class="project-card">
+                        <img src="src/projetos/Migrade-json/migrate.png" alt="Imagem Migrate Json">
+                        <div class="project-card-content">
+                            <h3>Migrate API Json</h3>
+                            <p>Projeto que executa conexão com API externa, coletar os dados interpretados em Json e armazena-los em banco de dados local</p>
+                             <div class="project-links">
+                                <!-- <a href="#" target="_blank">Ver teste <i class="fas fa-external-link-alt"></i></a> -->
+                                <a href="https://github.com/Destrons/Migrate_json" target="_blank">GitHub <i class="fab fa-github"></i></a>
+                            </div>
                         </div>
-                </div>             
-            <div id="div-next-button" class="div-next-button"><button class="next-button">&#10095;</button></div>
-        </div>
-    </section>
+                    </article>
+                    <article class="project-card">
+                        <img src="src/projetos/patters-hospital-diagnosis/hospital.png" alt="Imagem hospital patters">
+                        <div class="project-card-content">
+                            <h3>Hospital Patters</h3>
+                            <p>Estrutura backend de um sistema de diagnostico hospítalar</p>
+                            <P>Em Java que simula o fluxo de atendimento em um hospital utilizando Design Patterns (Padrões de Projeto) para estruturar as etapas de forma clara, escalável e reutilizável.</P>
+                             <div class="project-links">
+                                <!-- <a href="#" target="_blank">Ver teste <i class="fas fa-external-link-alt"></i></a> -->
+                                <a href="#" target="_blank">GitHub <i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <!-- <div class="container">
+                <h2>Meus Projetos Privados</h2>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <img src="src/projetos/SaaS-wpp-IA/assistente-virtual.png" alt="Imagem SaaS-wpp-IA">
+                        <div class="project-card-content">
+                            <h3>SaaS-wpp-IA</h3>
+                            <p>Este projeto de assistente virtual visa o atendimento para pessoas e também empresas.</p>
+                            <p>Com sua disponibilização 24h por dia, os clientes podem entrar em contato e obter respostas a qualquer hora do dia.</p>
+                            <div class="project-links">
+                                <a href="https://www.youtube.com/watch?v=TSaOCXBF1Uo" target="_blank">Ver teste <i class="fas fa-external-link-alt"></i></a>
+                                <a href="https://github.com/Destrons/SaaS-wpp-IA" target="_blank">GitHub <i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <img src="src/projetos/Migrade-json/migrate.png" alt="Imagem Migrate Json">
+                        <div class="project-card-content">
+                            <h3>Nome do Projeto 2</h3>
+                            <p>Uma breve descrição sobre o projeto, as tecnologias utilizadas e o problema que ele resolve. Mantenha conciso e impactante.</p>
+                             <div class="project-links">
+                                <a href="#" target="_blank">Ver teste <i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" target="_blank">GitHub <i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <img src="src/projetos/patters-hospital-diagnosis/hospital.png" alt="Imagem hospital patters">
+                        <div class="project-card-content">
+                            <h3>Nome do Projeto 3</h3>
+                            <p>Uma breve descrição sobre o projeto, as tecnologias utilizadas e o problema que ele resolve. Mantenha conciso e impactante.</p>
+                             <div class="project-links">
+                                <a href="#" target="_blank">Ver teste <i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" target="_blank">GitHub <i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div> -->
+        </section>
 
-    <section id="skills" class="secao-deslizante">
-        <table>
-            <caption><h3>Skills</h3></caption>
-            <thead>
-              <tr>
-                <th>Web developer</th>
-                <th>Frameworks</th>
-                <th>Programming Language</th>
-                <th>Database</th>
-                <th>Tools</th>
-                <th>Infrastructure</th>
-                <th>Tools</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>HTML5</td>
-                <td>Laravel</td>
-                <td>Java (Version 11+)</td>
-                <td>MySQL</td>
-                <td>Git and GitHub</td>
-                <td>Intune</td>
-                <td>Jira</td>
-              </tr>
-              <tr>
-                <td>CSS3</td>
-                <td>Node.js</td>
-                <td>Python</td>
-                <td>Oracle SQL</td>
-                <td>Docker</td>
-                <td>Microsoft Entra ID</td>
-                <td>Quest Kace</td>
-              </tr>
-              <tr>
-                <td>JavaScript</td>
-                <td>React.js</td>
-                <td>PHP</td>
-                <td>SQL Server</td>
-                <td></td>
-                <td>Domain controler and Active Directory</td>
-                <td>TeamViewer</td>
-              </tr>
-              <tr>
-                <td>TypeScript</td>
-                <td></td>
-                <td>C#</td>
-                <td></td>
-                <td></td>
-                <td>Microsoft EDR</td>
-                <td>McAfee</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>Clouds: Azure, Oracle and AWS</td>
-                <td>Intune</td>
-              </tr>
-            </tbody>
-          </table>
-    </section>
+        <section id="contact">
+            <div class="container">
+                <h2>Vamos Conversar!</h2>
+                <p>
+                    Estou sempre aberto a novas oportunidades e colaborações. Sinta-se à vontade para entrar em contato através das minhas redes ou por e-mail.
+                </p>
+                <p><strong><a href="mailto:thomas_neves@ymail.com">thomas_neves@ymail.com</a></strong></p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/thomas-neves-dev/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Destrons" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://x.com/ThomDts" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/thom_void/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/5511967841671" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </section>
 
-    <section id="contacts" class="secao-deslizante">
-        <h3>Contato</h3>
-        <p>Email: <a href="mailto:thomas_neves@ymail.com" target="_blank" rel="noopener noreferrer">thomas_neves@ymail.com</a></p>
-        <p>WhatsApp: <a href="https://wa.me/5511967841671" target="_blank" rel="noopener noreferrer">11 96784-1671</a></p>
-    </section>
-
-    <footer>
-        <p>© 2024 Thomas Neves Pereira</p>
+    </main>
+    
+    <footer class="footer">
+        <p>&copy; 2024 Thomas Neves. Todos os direitos reservados.</p>
     </footer>
-    </div>
-</body>
+
     <script src="src/js/script.js"></script>
-    <script src="src/js/darkmode.js"></script>
+</body>
 </html>
