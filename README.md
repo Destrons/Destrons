@@ -3,7 +3,7 @@
 
 ## Sobre Mim
 
-🎓 **Desenvolvedor de Sistemas** com foco em **PHP**, **Python**, **Laravel** e **React.js**. Incluindo cloud computing e **Microsoft Azure**.
+🎓 **Desenvolvedor de Sistemas** com forte conhecimento em  **JAVA**, **PHP** e **Python**. Incluindo cloud computing e **Microsoft Azure**.
 
 🚀 **Especialista em infraestrutura** e desenvolvedor full stack, apaixonado por criar aplicações e sistemas inovadores. Tenho um interesse especial em **Inteligência Artificial** e estou sempre explorando novas tecnologias para trazer soluções impactantes.
 
